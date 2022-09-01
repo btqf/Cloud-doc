@@ -1,0 +1,30 @@
+/* 解决tab链接模块的删除按钮显示问题 */
+.tablist-component {
+    .close-icon {
+        visibility: hidden;
+    }
+    .nav-link:hover .close-icon {
+        visibility: visible;
+    }
+    .nav-link.active .close-icon {
+        visibility: visible;
+    }
+
+    .unsaved-icon {
+        display: inline-block;
+        background-color: #d9534f;
+        width: 11px;
+        height: 11px;
+    }
+    // 鼠标悬挂后，不显示保存状态，而显示关闭符号
+    // 正常状态下显示保存状态
+    .withUnsaved.nav-link .close-icon {
+        display: none;
+      }
+    .withUnsaved.nav-link:hover .close-icon {
+        display: inline-block;
+      }
+    .withUnsaved.nav-link:hover .unsaved-icon {
+        display: none;
+      }
+}
